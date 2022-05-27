@@ -1,0 +1,76 @@
+.lastUserData{
+    flex: 4;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: top;
+}
+
+.lastUserDataMainContainer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.lastUserDataItemsTitle{
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 5px;
+    font-size: 22px;
+    color: #555;
+    font-weight: 600;
+}
+
+.lastUserDataSubContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+
+}
+
+.lastUserDataItem{
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    margin: 15px px;
+    padding: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 0px 15px -10px rgba(0,0,0,0.75); 
+    box-shadow: 0px 0px 15px -10px rgba(0,0,0,0.75);
+}
+
+.lastUserSubContainerTitle{
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 5px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.lastUserDataItemTitle{
+    font-size: 20px;
+    font-weight: bold;
+    color: #D54780;
+}
+
+.lastUserDataItemContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0px;
+}
+
+.lastUserDataItemValue {
+    font-size: 20px;
+    display: flex;
+    font-weight: bold;
+}
+
+

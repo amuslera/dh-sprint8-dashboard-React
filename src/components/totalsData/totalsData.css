@@ -1,0 +1,86 @@
+.totalsData{
+    flex: 4;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: top;
+    justify-content: space-between;
+}
+
+.totalsDataMainContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.totalsDataItemsTitle{
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 5px;
+    font-size: 22px;
+    color: #555;
+    font-weight: 600;
+}
+
+.totalsDataSubContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+
+}
+
+.totalsDataItem{
+    width: 150px; 
+    display: flex;
+    flex-direction: column;
+    margin: 15px px;
+    padding: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 0px 15px -10px rgba(0,0,0,0.75); 
+    box-shadow: 0px 0px 15px -10px rgba(0,0,0,0.75);
+}
+
+.totalsDataItemTitle{
+    font-size: 20px;
+    font-weight: bold;
+    color: #D54780;
+}
+
+.totalsDataItemContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px;
+}
+
+.totalsDataItemValue {
+    font-size: 30px;
+    font-weight: bold;
+    
+}
+
+.totalsDataItemGrowth {
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 15px;
+    color: rgb(169, 165, 165);
+    
+}
+
+.totalsDataIcon {
+    font-size: 18px;
+    margin-left: 0px;
+    color: green;
+}
+
+.totalsDataIcon.negative{
+    color: red;
+}
+
+
