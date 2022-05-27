@@ -7,6 +7,7 @@ export default class lastUserData extends React.Component {
         loading: true,
         lastUser: {},
         lastProduct: {},
+        avatarURL: ''
     }
 
     async componentDidMount () {
@@ -15,7 +16,8 @@ export default class lastUserData extends React.Component {
         const totals1 = await response1.json();
         this.setState({
             loading: false,
-            lastUser: totals1
+            lastUser: totals1,
+            avatarURL: "http://localhost:3050/images/profileImages/"
         })
     }
 
@@ -46,6 +48,10 @@ export default class lastUserData extends React.Component {
                         <div className='lastUserDataItemContainer'>
                         <span className='lastUserDataItemTitle'>Email:</span>
                         <span className='lastUserDataItemValue'>{this.state.lastUser.data.email} </span>
+                        </div>
+                        <div className='lastUserDataItemContainer'>
+                        <span className='lastUserDataItemTitle'>Avatar:</span>
+                        <img className='lastUserAvatarImg' src= {"http://localhost:3050/images/profileImages/" + this.state.lastUser.data.avatar} alt=""/>
                         </div>                        
                     </div>
                 </div>
