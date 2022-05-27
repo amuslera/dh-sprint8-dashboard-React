@@ -1,4 +1,4 @@
-import './productList.css'
+import './categoryList.css'
 import * as React from 'react';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
 
@@ -22,7 +22,7 @@ const rows = [
   { id: 9, lastName: 'Roxie', firstName: 'Harvey',  email: 'roxie@email.com' },
 ];
 
-export default function productList() {
+export default function categoryist() {
   return (
     <div style={{ height: 400,flex: 4 }}>
       <DataGrid

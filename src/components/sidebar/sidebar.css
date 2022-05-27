@@ -22,7 +22,7 @@
     color: rgb(187,186,186); 
 }
 
-.sidebarList {
+.sidebarList, .sidebarLink {
     list-style: none;
     padding: 5px;
 }
@@ -45,4 +45,7 @@
     font-size: 20px !important;
 }
 
-
+.sidebarLink{
+    color: #555;
+    text-decoration: none;    
+}
