@@ -5,7 +5,7 @@ import './categoriesTable.css'
 const columns = [
     { field: 'id' , headerName: 'ID' , width: 300 , columnTypes: 'object'},
     { field: 'email', headerName: 'Descripcion', width: 200 },
-    { field: 'address.city', headerName: 'Cantidad de productos asociados', width: 250, columnTypes : 'object'},
+    { field: 'username', headerName: 'Cantidad de productos asociados', width: 250, columnTypes : 'object'},
     
 ];
 
