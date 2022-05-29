@@ -1,69 +1,30 @@
-import React from 'react'
+async function loadIntoTable (url, table) {
+    const tableHead = table.querySelector('thead');
+    const tableBody = table.querySelector('tbody');
+    const response = await fetch(url);
+    const data = await response.json();
 
+    tableHead.innerHTML = "<tr></tr>";
+    tableBody.innerHTML = "";
 
-export default class allCategories extends React.Component {
-  
-    state = {
-        loading: true,
-        data: {},
-        
+    for (const HeaderText of Headers) {
+        const headerElement = document.createElement('th');
+        headerElement.innerText = HeaderText;
+        tableHead.firstElementChild.appendChild(headerElement);
     }
 
-    async componentDidMount () {
-        const url1 = 'http://localhost:3050/api/categorias';
-        const response1 = await fetch(url1);
-        const totals1 = await response1.json();
-        const categorias = totals1.map(categoria => {
-                return {
-                    id: categoria.id,
-                    description: categoria.descripcion,
-                }
-            })
-
-        this.setState({
-            loading: false,
-            data: totals1,
-            categorias: categorias,
-        })
-    
+    for (const row of data) {
+        const rowElement = document.createElement('tr');
+        for (const celText of row) {
+            const cellElement = document.createElement('td');
+            cellElement.innerText = celText;
+            rowElement.appendChild(cellElement);
+        }
+        tableBody.appendChild(rowElement);
     }
 
 
-
-
-    render() {
-        
-
-
-        return (
-        <div className='lastUserData'>
-            <div className='lastUserDataMainContainer'>
-                <div className='lastUserDataItemsTitle'>
-                    <span>Ultimo usuario registrado en BD</span>
-                </div>
-                <div className='lastUserDataSubContainer'>
-                    <div className='lastUserDataItem'>
-                        <div className='lastUserDataItemContainer'>
-                            <span className='lastUserDataItemTitle'>ID:</span>
-                            <span className='lastUserDataItemValue'>{this.state.lastUser.data.id}</span>
-                        </div>
-                        <div className='lastUserDataItemContainer'>
-                            <span className='lastUserDataItemTitle'>Nombre:</span>
-                            <span className='lastUserDataItemValue'>{this.state.lastUser.data.nombre} {this.state.lastUser.data.apellido} </span>
-                        </div>
-                        <div className='lastUserDataItemContainer'>
-                        <span className='lastUserDataItemTitle'>Email:</span>
-                        <span className='lastUserDataItemValue'>{this.state.lastUser.data.email} </span>
-                        </div>
-                        <div className='lastUserDataItemContainer'>
-                        <span className='lastUserDataItemTitle'>Avatar:</span>
-                        <img className='lastUserAvatarImg' src= {"http://localhost:3050/images/profileImages/" + this.state.lastUser.data.avatar} alt=""/>
-                        </div>                        
-                    </div>
-                </div>
-                </div>
-        </div>
-        )
-        
-    }
 }
+
+loadIntoTable('./categorias.json', document.querySelector('#categoriesTable'));
+

@@ -1,0 +1,35 @@
+{
+    "status": 200,
+    "message": "ProductosPorCategoria",
+    "url": "api/test",
+    "producto_categoria": [
+    {
+    "sumaProductos": 2,
+    "categorias": {
+    "id": 1,
+    "descripcion": "Mujeres"
+    }
+    },
+    {
+    "sumaProductos": 3,
+    "categorias": {
+    "id": 2,
+    "descripcion": "Hombres"
+    }
+    },
+    {
+    "sumaProductos": 4,
+    "categorias": {
+    "id": 3,
+    "descripcion": "Invierno"
+    }
+    },
+    {
+    "sumaProductos": 1,
+    "categorias": {
+    "id": 4,
+    "descripcion": "Verano"
+    }
+    }
+    ]
+    }

@@ -13,21 +13,21 @@ export default class totalsDataInfo extends React.Component {
     }
 
     async componentDidMount () {
-        const url1 = 'http://localhost:3050/api/usersCount';
+        const url1 = 'http://dh-g9-clessidra.herokuapp.com/api/usersCount';
         const response1 = await fetch(url1);
         const totals1 = await response1.json();
         this.setState({
             loading: false,
             usersCount: totals1
         })
-        const url2 = 'http://localhost:3050/api/productsCount';
+        const url2 = 'http://dh-g9-clessidra.herokuapp.com/api/productsCount';
         const response2 = await fetch(url2);
         const totals2 = await response2.json();
         this.setState({
             loading: false,
             productsCount: totals2
         })
-        const url3 = 'http://localhost:3050/api/categorias';
+        const url3 = 'http://dh-g9-clessidra.herokuapp.com/api/categorias';
         const response3 = await fetch(url3);
         const totals3 = await response3.json();
         this.setState({
