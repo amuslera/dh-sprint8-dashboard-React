@@ -6,6 +6,7 @@ export default class lastProductData extends React.Component {
     state = {
         loading: true,
         lastProduct: {},
+        imagenProducto: ""
     }
 
     async componentDidMount () {
@@ -14,8 +15,15 @@ export default class lastProductData extends React.Component {
         const totals2 = await response2.json();
         this.setState({
             loading: false,
-            lastProduct: totals2
+            lastProduct: totals2,
+            imagenProducto: "http://localhost:3050/images/products/" + totals2.data.imagen
         })
+        if(!this.state.lastProduct.data.imagen) {
+            return this.setState(
+                {imagenProducto: "http://localhost:3050/images/logo.png"}
+            
+            )
+        }
         
     }
 
@@ -59,6 +67,10 @@ export default class lastProductData extends React.Component {
                         <div className='lastProductDataItemContainer'>
                         <span className='lastProductDataItemTitle'>Descripción:</span>
                         <span className='lastProductDataItemValue'>{this.state.lastProduct.data.descripcion} </span>
+                        </div>
+                        <div className='lastProductDataItemContainer'>
+                        <span className='lastProductDataItemTitle'>Imagen principal:</span>
+                        <img className='lastProductAvatarImg' src= {this.state.imagenProducto} alt=""/>
                         </div>                        
                     </div>
                 </div>

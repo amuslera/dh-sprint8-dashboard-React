@@ -1,40 +1,40 @@
 import React from 'react'
-import './lastUserData.css'
 
-export default class lastUserData extends React.Component {
+
+export default class allCategories extends React.Component {
   
     state = {
         loading: true,
-        lastUser: {},
-        avatar: "",
+        data: {},
+        
     }
 
     async componentDidMount () {
-        const url1 = 'http://localhost:3050/api/lastUser';
+        const url1 = 'http://localhost:3050/api/categorias';
         const response1 = await fetch(url1);
         const totals1 = await response1.json();
+        const categorias = totals1.map(categoria => {
+                return {
+                    id: categoria.id,
+                    description: categoria.descripcion,
+                }
+            })
+
         this.setState({
             loading: false,
-            lastUser: totals1,
-            avatar: "http://localhost:3050/images/profileImages/" + totals1.data.avatar,
-            
+            data: totals1,
+            categorias: categorias,
         })
-        if(!this.state.lastUser.data.avatar) {
-            return this.setState(
-                {avatar: "http://localhost:3050/images/noAvatar.png"}
-            
-            )
-        }
+    
     }
 
+
+
+
     render() {
-        if (this.state.loading) {
-            return <div>Loading...</div>
-        }
-        if (!this.state.lastUser) {
-            return <div>No hay usuarios</div>
-        }
         
+
+
         return (
         <div className='lastUserData'>
             <div className='lastUserDataMainContainer'>
@@ -57,7 +57,7 @@ export default class lastUserData extends React.Component {
                         </div>
                         <div className='lastUserDataItemContainer'>
                         <span className='lastUserDataItemTitle'>Avatar:</span>
-                        <img className='lastUserAvatarImg' src= {this.state.avatar} alt=""/>
+                        <img className='lastUserAvatarImg' src= {"http://localhost:3050/images/profileImages/" + this.state.lastUser.data.avatar} alt=""/>
                         </div>                        
                     </div>
                 </div>
