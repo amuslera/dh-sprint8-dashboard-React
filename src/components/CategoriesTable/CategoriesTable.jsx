@@ -3,9 +3,9 @@ import DataTable from '../dataTable/DataTable'
 import './categoriesTable.css'
 
 const columns = [
-    { field: 'id' , headerName: 'ID' , width: 300 },
+    { field: 'id' , headerName: 'ID' , width: 30 },
     { field: 'email', headerName: 'email', width: 200 },
-    { field: 'username', headerName: 'Nombre de usuario', width: 250},
+    { field: 'username', headerName: 'Nombre de usuario', width: 200},
     { field: 'address', headerName: 'Direccion (NO ANDA)', width: 250},
     { field: '[{address.city}]' , headerName: 'Ciudad (NO ANDA)', width: 250},
     { field: 'address.city', headerName: 'Ciudad (NO ANDA)', width: 250, },
