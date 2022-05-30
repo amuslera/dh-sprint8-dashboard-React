@@ -1,43 +1,48 @@
-import React, {useEffect, useState} from 'react'
-import DataTable from '../dataTable/DataTable'
+import React, { Component } from "react";
 import './categoriesTable.css'
 
-const columns = [
-    { field: 'id' , headerName: 'ID' , width: 30 },
-    { field: 'email', headerName: 'email', width: 200 },
-    { field: 'username', headerName: 'Nombre de usuario', width: 200},
-    { field: 'address', headerName: 'Direccion (NO ANDA)', width: 250},
-    { field: '[{address.city}]' , headerName: 'Ciudad (NO ANDA)', width: 250},
-    { field: 'address.city', headerName: 'Ciudad (NO ANDA)', width: 250, },
-    { field: 'users.address.city', headerName: 'Ciudad (NO ANDA)', width: 250, },
-    { field: ['users.address.city'], headerName: 'Ciudad (NO ANDA)', width: 250, },
-    
-    
-];
+class ProdXCat extends Component {
+  constructor() {
+    super();
+    this.state = {
+      arrayDeP: [],
+    };
+  }
 
-const CategoriesTable = () => {
-    const [data, setData] = useState([]);
-
-    useEffect (() => {
-        fetch ('https:jsonplaceholder.typicode.com/users')
-            .then((response) => response.json())
-            .then((json) => {
-                console.log(json)
-                setData(json);
-            }   
-            )
-    }, [])
-    
-
+  componentDidMount() {
+    fetch("http://localhost:3050/api/prodXCat")
+      .then((response) => response.json())
+      .then((json) => {
+        this.setState({ arrayDeP: json.producto_categoria });
+      })
+      .catch((error) => console.log(error));
+  }
+  render() {
     return (
-        <div style={{ height: 400,flex: 4 }}>
-    <DataTable 
-        rows={data}
-        columns={columns}
-    />
-    </div>
+        <div className="categoriesTable">
+            <h1>Productos por Categoria</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Descripcion</th>
+                        <th>Cantidad de productos asociados</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {this.state.arrayDeP.map((producto_categoria) => (
+                        <tr key={producto_categoria.categorias.id}>
+                            <td>{producto_categoria.categorias.id}</td>
+                            <td>{producto_categoria.categorias.descripcion}</td>
+                            <td>{producto_categoria.sumaProductos}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+        </div>
+    );
 
-  )
+    }
 }
 
-export default CategoriesTable
+export default ProdXCat;

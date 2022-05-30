@@ -1,37 +1,53 @@
 import './userList.css'
-import * as React from 'react';
-import { DataGrid, GridColDef } from '@mui/x-data-grid';
+import React, { Component } from "react";
 
-const columns: GridColDef[] = [
-  { field: 'id', headerName: 'ID', width: 70 },
-  { field: 'firstName', headerName: 'Nombre', width: 130 },
-  { field: 'lastName', headerName: 'Apellido', width: 130 },
-  { field: 'email', headerName: 'Email', width: 200 },
-  
-];
+class ProductList extends Component {
+  constructor() {
+    super();
+    this.state = {
+      arrayDeU: [],
+    };
+  }
 
-const rows = [
-  { id: 1, lastName: 'Snow', firstName: 'Jon', email: 'jon@email.com' },
-  { id: 2, lastName: 'Lannister', firstName: 'Cersei',  email: 'cersei@email.com' },
-  { id: 3, lastName: 'Lannister', firstName: 'Jaime',  email: 'jaimie@email.com' },
-  { id: 4, lastName: 'Stark', firstName: 'Arya',  email: 'arya@email.com' },
-  { id: 5, lastName: 'Targaryen', firstName: 'Daenerys',  email: 'daenerys@email.com' },
-  { id: 6, lastName: 'Melisandre', firstName: null,  email: 'melisandre@email.com' },
-  { id: 7, lastName: 'Clifford', firstName: 'Ferrara',  email: 'cliff@email.com' },
-  { id: 8, lastName: 'Frances', firstName: 'Rossini',  email: 'frances@email.com' },
-  { id: 9, lastName: 'Roxie', firstName: 'Harvey',  email: 'roxie@email.com' },
-];
+  componentDidMount() {
+    fetch("http://localhost:3050/api/users")
+      .then((response) => response.json())
+      .then((json) => {
+        this.setState({ arrayDeU: json.users });
+      })
+      .catch((error) => console.log(error));
+  }
+  render() {
+    return (
+      <div className="productList">
+        <h1>Listado de usuarios</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Creado el</th>
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>Email</th>
+              <th>Avatar</th>
+            </tr>
+          </thead>
+          <tbody>
+            {this.state.arrayDeU.map((users) => (
+              <tr key={users.id}>
+                <td>{users.id}</td>
+                <td>{users.fecha_creacion}</td>
+                <td>{users.nombre}</td>
+                <td>{users.apellido}</td>
+                <td>{users.email}</td>
+                <td>{<img className='lastUserAvatarImg' src= { !users.avatar ? "http://localhost:3050/images/noAvatar.png" : "http://localhost:3050/images/profileImages/" + users.avatar} alt=""/>}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    );
 
-export default function userList() {
-  return (
-    <div style={{ height: 400,flex: 4 }}>
-      <DataGrid
-        rows={rows}
-        columns={columns}
-        pageSize={5}
-        rowsPerPageOptions={[5]}
-        checkboxSelection
-      />
-    </div>
-  );
+  }
 }
+export default ProductList;

@@ -6,8 +6,6 @@ import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import UserList from "./pages/userList/UserList";
 import ProductList from "./pages/productList/ProductList";
 import CategoriesTable from "./components/CategoriesTable/CategoriesTable";
-
-
 function App() {
   return (
     <Router>

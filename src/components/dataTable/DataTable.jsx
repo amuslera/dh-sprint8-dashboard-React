@@ -15,6 +15,7 @@ const DataTable = ({
     <DataGrid
       rows={rows}
       columns={columns}
+      getRowId={(row) => row.id}
     />
   );
 };
