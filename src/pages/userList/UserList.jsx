@@ -1,7 +1,8 @@
 import './userList.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { Component } from "react";
 
-class ProductList extends Component {
+class UserList extends Component {
   constructor() {
     super();
     this.state = {
@@ -19,10 +20,10 @@ class ProductList extends Component {
   }
   render() {
     return (
-      <div className="productList">
+      <div className="productList container-sm">
         <h1>Listado de usuarios</h1>
-        <table>
-          <thead>
+        <table className='table table-striped'>
+          <thead className= 'table-dark'>
             <tr>
               <th>ID</th>
               <th>Creado el</th>
@@ -50,4 +51,4 @@ class ProductList extends Component {
 
   }
 }
-export default ProductList;
+export default UserList;

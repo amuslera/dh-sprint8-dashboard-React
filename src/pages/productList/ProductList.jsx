@@ -1,5 +1,7 @@
 import './productList.css'
 import React, { Component } from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 class ProductList extends Component {
   constructor() {
@@ -19,10 +21,10 @@ class ProductList extends Component {
   }
   render() {
     return (
-      <div className="productList">
-        <h1>Productos</h1>
-        <table>
-          <thead>
+      <div className="productList container-sm">
+        <h1>Listado de productos</h1>
+        <table className='table table-stripped'>
+          <thead className='table-dark'>
             <tr>
               <th>ID</th>
               <th>Nombre</th>

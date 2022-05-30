@@ -49,7 +49,7 @@ export default class totalsDataInfo extends React.Component {
         <div className='totalsData'>
             <div className='totalsDataMainContainer'>
                 <div className='totalsDataItemsTitle'>
-                    <span>Ultimas 24 horas</span>
+                    <h1>Ultimos datos</h1>
                 </div>
                 <div className='totalsDataSubContainer'>
                     <div className='totalsDataItem'>

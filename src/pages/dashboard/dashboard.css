@@ -1,7 +1,7 @@
 .dashboard {
     flex-direction: column;
-    flex: 3;
-    padding: 20px;
+    flex: 4;
+    margin-left: 10px;
     align-items: center;
 }
 
