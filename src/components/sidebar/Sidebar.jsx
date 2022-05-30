@@ -13,7 +13,7 @@ export default function Sidebar() {
                     <li className="sidebarListItem">
                         <Link className="sidebarLink" to="/">
                             <DashboardOutlined className="sidebarIcon"/>
-                            Totales
+                            Ultimos datos
                         </Link>
                     </li>
                     <li className="sidebarListItem">

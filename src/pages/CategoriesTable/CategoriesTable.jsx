@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import './categoriesTable.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class ProdXCat extends Component {
   constructor() {
@@ -19,10 +20,10 @@ class ProdXCat extends Component {
   }
   render() {
     return (
-        <div className="categoriesTable">
-            <h1>Productos por Categoria</h1>
-            <table>
-                <thead>
+        <div className="categoriesTable container-sm">
+            <h1>Listado de categorias</h1>
+            <table className="table table-striped">
+                <thead className="table-dark">
                     <tr>
                         <th>ID</th>
                         <th>Descripcion</th>
