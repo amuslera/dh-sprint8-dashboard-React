@@ -5,7 +5,7 @@ export default function Topbar() {
     <div className='topbar'>
         <div className='topbarWrapper'>
             <div className='topbarLeft'>
-            <span className='logo'>CLESSIDRA ADMIN</span>
+            <span className='logo'>CLESSIDRA ADMIN DASHBOARD</span>
             </div>
         </div>
     </div>

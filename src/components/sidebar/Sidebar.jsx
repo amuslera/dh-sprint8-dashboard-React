@@ -1,6 +1,6 @@
 import "./sidebar.css"
 import {PersonOutlineOutlined, Inventory2Outlined, CategoryOutlined, DashboardOutlined} from "@mui/icons-material"
-import {Link} from "react-router-dom"
+import { NavLink} from "react-router-dom"
 
 
 export default function Sidebar() {
@@ -8,31 +8,43 @@ export default function Sidebar() {
     <div className="sidebar">
         <div className="sidebarWrapper">
             <div className="sidebarMenu">
-                <h3 className="sidebarTitle">Dashboard</h3>
+                <h3 className="sidebarTitle">Menu de opciones:</h3>
                 <ul className="sidebarList">
-                    <li className="sidebarListItem">
-                        <Link className="sidebarLink" to="/">
+                    <li>
+                        <NavLink 
+                            to="/"
+                            className="sidebarLink"
+                            activeClassName="active">
                             <DashboardOutlined className="sidebarIcon"/>
                             Ultimos datos
-                        </Link>
+                        </NavLink>
                     </li>
-                    <li className="sidebarListItem">
-                        <Link className="sidebarLink" to="/users">
+                    <li>
+                        <NavLink 
+                        to="/users"
+                        className="sidebarLink"
+                        activeClassName="active">
                             <PersonOutlineOutlined className="sidebarIcon"/>
                             Listado de usuarios
-                        </Link>
+                        </NavLink>
                     </li>
-                    <li className="sidebarListItem">
-                        <Link className="sidebarLink" to="/products">
-                    <Inventory2Outlined className="sidebarIcon"/>
-                    Listado de productos
-                        </Link>
+                    <li>
+                        <NavLink
+                        to="/products"
+                        className="sidebarLink"
+                        activeClassName="active">
+                            <Inventory2Outlined className="sidebarIcon"/>
+                            Listado de productos
+                        </NavLink>
                     </li>
-                    <li className="sidebarListItem">
-                        <Link className="sidebarLink" to="/categories">
-                    <CategoryOutlined className="sidebarIcon"/>
-                    Listado de categorías
-                        </Link>
+                    <li>
+                        <NavLink
+                        to="/categories" 
+                        className="sidebarLink"
+                        activeClassName="active">
+                            <CategoryOutlined className="sidebarIcon"/>
+                            Listado de categorías
+                        </NavLink>
                     </li>
                 </ul>
                 </div>

@@ -15,7 +15,7 @@ function App() {
       <div className="containerApp">
         <Sidebar/>
         <Routes>
-          <Route path="/" element={<Dashboard />} />  
+          <Route exact path="/" element={<Dashboard />} />  
           <Route path="/users" element={<UserList />} />
           <Route path="/products" element={<ProductList/>} />
           <Route path="/categories" element={<CategoriesTable/>} />

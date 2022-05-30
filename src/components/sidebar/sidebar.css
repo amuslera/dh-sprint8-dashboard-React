@@ -14,12 +14,14 @@
 
 .sidebarMenu{
     margin-bottom: 10px;
+    margin-top: 30px;
 
 }
 
 .sidebarTitle{
-    font-size: 13px;
-    color: rgb(187,186,186); 
+    font-size: 22px;
+    color: rgb(16, 15, 15); 
+    font-weight: 600;
 }
 
 .sidebarList, .sidebarLink {
@@ -36,8 +38,9 @@
 
 }
 
-.sidebarListItem.active, .sidebarListItem:hover{
+.sidebarLink.active, .sidebarLink:hover{
     background-color: rgb(240,240,255);
+    color:#D54780
     
 }
 
@@ -48,5 +51,10 @@
 
 .sidebarLink{
     color: #555;
-    text-decoration: none;    
+    text-decoration: none;
+    padding: 10px 0px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;    
 }
