@@ -12,7 +12,7 @@ class ProductList extends Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:3050/api/products")
+    fetch("https://dh-g9-clessidra.herokuapp.com/api/products")
       .then((response) => response.json())
       .then((json) => {
         this.setState({ arrayDeP: json.products });

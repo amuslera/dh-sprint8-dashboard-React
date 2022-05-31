@@ -10,18 +10,18 @@ export default class lastUserData extends React.Component {
     }
 
     async componentDidMount () {
-        const url1 = 'http://localhost:3050/api/lastUser';
+        const url1 = 'https://dh-g9-clessidra.herokuapp.com/api/lastUser';
         const response1 = await fetch(url1);
         const totals1 = await response1.json();
         this.setState({
             loading: false,
             lastUser: totals1,
-            avatar: "http://localhost:3050/images/profileImages/" + totals1.data.avatar,
+            avatar: "https://dh-g9-clessidra.herokuapp.com/images/profileImages/" + totals1.data.avatar,
             
         })
         if(!this.state.lastUser.data.avatar) {
             return this.setState(
-                {avatar: "http://localhost:3050/images/noAvatar.png"}
+                {avatar: "https://dh-g9-clessidra.herokuapp.com/images/noAvatar.png"}
             
             )
         }

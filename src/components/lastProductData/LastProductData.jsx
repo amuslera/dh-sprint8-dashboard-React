@@ -10,17 +10,17 @@ export default class lastProductData extends React.Component {
     }
 
     async componentDidMount () {
-        const url2 = 'http://localhost:3050/api/lastProduct';
+        const url2 = 'https://dh-g9-clessidra.herokuapp.com/api/lastProduct';
         const response2 = await fetch(url2);
         const totals2 = await response2.json();
         this.setState({
             loading: false,
             lastProduct: totals2,
-            imagenProducto: "http://localhost:3050/images/products/" + totals2.data.imagen
+            imagenProducto: "https://dh-g9-clessidra.herokuapp.com/images/products/" + totals2.data.imagen
         })
         if(!this.state.lastProduct.data.imagen) {
             return this.setState(
-                {imagenProducto: "http://localhost:3050/images/logo.png"}
+                {imagenProducto: "https://dh-g9-clessidra.herokuapp.com/images/logo.png"}
             
             )
         }

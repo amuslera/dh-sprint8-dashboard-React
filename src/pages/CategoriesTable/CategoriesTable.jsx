@@ -11,7 +11,7 @@ class ProdXCat extends Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:3050/api/prodXCat")
+    fetch("https://dh-g9-clessidra.herokuapp.com/api/prodXCat")
       .then((response) => response.json())
       .then((json) => {
         this.setState({ arrayDeP: json.producto_categoria });

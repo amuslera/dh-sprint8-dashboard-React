@@ -11,7 +11,7 @@ class UserList extends Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:3050/api/users")
+    fetch("https://dh-g9-clessidra.herokuapp.com/api/users")
       .then((response) => response.json())
       .then((json) => {
         this.setState({ arrayDeU: json.users });
@@ -41,7 +41,7 @@ class UserList extends Component {
                 <td>{users.nombre}</td>
                 <td>{users.apellido}</td>
                 <td>{users.email}</td>
-                <td>{<img className='lastUserAvatarImg' src= { !users.avatar ? "http://localhost:3050/images/noAvatar.png" : "http://localhost:3050/images/profileImages/" + users.avatar} alt=""/>}</td>
+                <td>{<img className='lastUserAvatarImg' src= { !users.avatar ? "https://dh-g9-clessidra.herokuapp.com/images/noAvatar.png" : "https://dh-g9-clessidra.herokuapp.com/images/profileImages/" + users.avatar} alt=""/>}</td>
               </tr>
             ))}
           </tbody>
