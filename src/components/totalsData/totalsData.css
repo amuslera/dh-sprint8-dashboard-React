@@ -26,14 +26,14 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     margin-bottom: 20px;
 
 }
 
 .totalsDataItem{
-    width: 150px; 
+    width: 160px; 
     display: flex;
     flex-direction: column;
     margin: 15px px;

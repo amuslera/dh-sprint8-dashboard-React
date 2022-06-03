@@ -57,7 +57,7 @@ export default class lastUserData extends React.Component {
                         </div>
                         <div className='lastUserDataItemContainer'>
                         <span className='lastUserDataItemTitle'>Avatar:</span>
-                        <img className='lastUserAvatarImg' src= {this.state.avatar} alt=""/>
+                        <span className='lastUserDataItemValue'><img className='lastUserAvatarImg' src= {this.state.avatar} alt=""/></span>
                         </div>                        
                     </div>
                 </div>

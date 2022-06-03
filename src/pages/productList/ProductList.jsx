@@ -23,10 +23,10 @@ class ProductList extends Component {
     return (
       <div className="productList container-sm">
         <h1>Listado de productos</h1>
-        <table className='table table-stripped'>
+        <table className='table table-striped'>
           <thead className='table-dark'>
             <tr>
-              <th>ID</th>
+              <th>ID/Link</th>
               <th>Nombre</th>
               <th>Descripcion</th>
               <th>Talle</th>
@@ -37,7 +37,7 @@ class ProductList extends Component {
           <tbody>
             {this.state.arrayDeP.map((products) => (
               <tr key={products.id}>
-                <td>{products.id}</td>
+                <td><a href={`https://dh-g9-clessidra.herokuapp.com/products/detail/${products.id}` } target= "_blank" rel='noreferrer'>{products.id}</a></td> 
                 <td>{products.nombre}</td>
                 <td>{products.descripcion}</td>
                 <td>{products.talle.descripcion}</td>

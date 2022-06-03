@@ -1,5 +1,5 @@
 .sidebar {
-    flex: 1;
+    width: 200px;
     height: calc(100vh - 50px);
     background-color: rgb(251,251,255);
     position: sticky;
@@ -7,7 +7,7 @@
 }
 
 .sidebarWrapper{
-    padding: 20px;
+    padding: 10px;
     color: #555;
 
 }
@@ -26,7 +26,7 @@
 
 .sidebarList, .sidebarLink {
     list-style: none;
-    padding: 5px;
+    padding: 0px;
 }
 
 .sidebarListItem {

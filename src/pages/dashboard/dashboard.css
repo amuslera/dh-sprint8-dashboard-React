@@ -1,24 +1,27 @@
 .dashboard {
     flex-direction: column;
-    flex: 4;
+    width: fit-content;
     margin-left: 10px;
     align-items: center;
+    padding: 30px;
 }
 
 .topContainer{
-    margin: 0px 0px;
-    width: 100%;
+    max-width: 500px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
+
 }
 
 .bottomContainer{
-    margin: 20px 0px;
+    max-width: 500px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
     
 }

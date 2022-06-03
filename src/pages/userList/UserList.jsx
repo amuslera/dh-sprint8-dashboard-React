@@ -26,7 +26,6 @@ class UserList extends Component {
           <thead className= 'table-dark'>
             <tr>
               <th>ID</th>
-              <th>Creado el</th>
               <th>Nombre</th>
               <th>Apellido</th>
               <th>Email</th>
@@ -37,7 +36,6 @@ class UserList extends Component {
             {this.state.arrayDeU.map((users) => (
               <tr key={users.id}>
                 <td>{users.id}</td>
-                <td>{users.fecha_creacion}</td>
                 <td>{users.nombre}</td>
                 <td>{users.apellido}</td>
                 <td>{users.email}</td>

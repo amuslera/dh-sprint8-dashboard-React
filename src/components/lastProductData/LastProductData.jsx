@@ -70,7 +70,7 @@ export default class lastProductData extends React.Component {
                         </div>
                         <div className='lastProductDataItemContainer'>
                         <span className='lastProductDataItemTitle'>Imagen principal:</span>
-                        <img className='lastProductAvatarImg' src= {this.state.imagenProducto} alt=""/>
+                        <span className='lastProductDataItemValue'><img className='lastProductAvatarImg' src= {this.state.imagenProducto} alt=""/></span>
                         </div>                        
                     </div>
                 </div>
