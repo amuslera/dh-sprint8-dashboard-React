@@ -20,7 +20,7 @@ export default class lastProductData extends React.Component {
         })
         if(!this.state.lastProduct.data.imagen) {
             return this.setState(
-                {imagenProducto: "https://dh-g9-clessidra.herokuapp.com/images/logo.png"}
+                {imagenProducto: "https://dh-g9-clessidra.herokuapp.com/images/noImage.png"}
             
             )
         }
