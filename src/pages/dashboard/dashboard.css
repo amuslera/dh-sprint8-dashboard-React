@@ -5,6 +5,14 @@
     align-items: space-around;
     justify-content: flex-start;
     height: fit-content;
+    max-width: fit-content;
+    margin: auto;
+}
+
+@media (min-width: 1000px) {
+    .dashboard {
+        margin-left: 70px;
+    }
 }
 
 .totalsDataContainer {
