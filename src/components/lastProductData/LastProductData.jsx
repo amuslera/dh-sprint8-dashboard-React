@@ -16,9 +16,9 @@ export default class lastProductData extends React.Component {
         this.setState({
             loading: false,
             lastProduct: totals2,
-            imagenProducto: "https://dh-g9-clessidra.herokuapp.com/images/products/" + totals2.data.imagen
+            imagenProducto: "https://dh-g9-clessidra.herokuapp.com/images/products/" + totals2.data.imagenes[0].nombreArchivo
     })                      
-        if(!this.state.lastProduct.data.imagen) {
+        if(!this.state.lastProduct.data.imagenes[0].nombreArchivo){
             return this.setState(
                 {imagenProducto: "https://dh-g9-clessidra.herokuapp.com/images/noImage.png"}
             
