@@ -36,13 +36,11 @@ export default class lastUserData extends React.Component {
         }
         
         return (
-        <div className='lastUserData'>
             <div className='lastUserDataMainContainer'>
                 <div className='lastUserDataItemsTitle'>
-                    <span>Ultimo usuario registrado en BD</span>
+                    <h1>Ultimo usuario registrado en BD</h1>
                 </div>
                 <div className='lastUserDataSubContainer'>
-                    <div className='lastUserDataItem'>
                         <div className='lastUserDataItemContainer'>
                             <span className='lastUserDataItemTitle'>ID:</span>
                             <span className='lastUserDataItemValue'>{this.state.lastUser.data.id}</span>
@@ -57,12 +55,10 @@ export default class lastUserData extends React.Component {
                         </div>
                         <div className='lastUserDataItemContainer'>
                         <span className='lastUserDataItemTitle'>Avatar:</span>
-                        <span className='lastUserDataItemValue'><img className='lastUserAvatarImg' src= {this.state.avatar} alt=""/></span>
+                        <span className='lastUserDataItemValue'><img src= {this.state.avatar} alt=""/></span>
                         </div>                        
                     </div>
                 </div>
-                </div>
-        </div>
         )
         
     }

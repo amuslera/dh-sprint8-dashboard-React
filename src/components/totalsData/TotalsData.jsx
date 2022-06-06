@@ -46,10 +46,9 @@ export default class totalsDataInfo extends React.Component {
         }
 
         return (
-        <div className='totalsData'>
             <div className='totalsDataMainContainer'>
                 <div className='totalsDataItemsTitle'>
-                    <h1>Ultimos datos</h1>
+                    <h1>Panel general</h1>
                 </div>
                 <div className='totalsDataSubContainer'>
                     <div className='totalsDataItem'>
@@ -75,7 +74,6 @@ export default class totalsDataInfo extends React.Component {
                     </div>
                 </div>
             </div>
-        </div>
         )
         
     }

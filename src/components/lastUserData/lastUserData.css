@@ -1,63 +1,34 @@
-.lastUserData{
-    flex: 4;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: top;
-}
-
 .lastUserDataMainContainer {
-    width: 100%;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
+    margin: 15px;
+    padding: 5px;
+    
+
 }
 
-.lastUserDataItemsTitle{
-    width: 100%;
-    justify-content: center;
-    margin-bottom: 5px;
+.lastUserDataItemsTitle {
+    display: flex;
+}
+
+.lastUserDataItemsTitle h1 {
     font-size: 22px;
-    color: #555;
     font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: uppercase;
 }
 
 .lastUserDataSubContainer {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-
-}
-
-.lastUserDataItem{
-    width: 100%; 
     display: flex;
     flex-direction: column;
-    margin: 15px;
-    padding: 30px;
-    border-radius: 10px;
-    cursor: pointer;
-    -webkit-box-shadow: 0px 0px 15px -10px rgba(0,0,0,0.75); 
-    box-shadow: 0px 0px 15px -10px rgba(0,0,0,0.75);
-}
-
-.lastUserSubContainerTitle{
     width: 100%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 5px;
-    font-size: 22px;
-    font-weight: 600;
-}
-
-.lastUserDataItemTitle{
-    font-size: 20px;
-    font-weight: bold;
-    color: #D54780;
-    flex:1;
-    margin-bottom: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 0px 15px -10px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 15px -10px rgba(0,0,0,0.75);
+    padding: 20px;
 }
 
 .lastUserDataItemContainer {
@@ -66,20 +37,29 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    margin: 10px 0px;
+    
+}
+
+.lastUserDataItemTitle {
+    font-size: 16px;
+    font-weight: bold;
+    color: #D54780;
+    flex:1;
+    margin-bottom: 10px;
 }
 
 .lastUserDataItemValue {
-    font-size: 20px;
-    display: flex;
+    font-size: 16px;
     font-weight: bold;
-    flex: 2;
+    color: black;
+    flex:3;
+    margin-bottom: 10px;
 }
 
-.lastUserAvatarImg{
-    width: 200px;
+.lastUserDataItemValue img {
+    width: 100px;
     height: auto;
-    border-radius: 10%;
+    border-radius: 100%;
     object-fit: cover;
-    flex: 2;
+
 }

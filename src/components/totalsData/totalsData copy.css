@@ -1,52 +1,46 @@
-.totalsDataMainContainer{
+.totalsDataMainContainer {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: flex-start;
-    margin: 15px;
-    padding: 5px;
-
+    margin: 5px;
+    -webkit-box-shadow: 0px 0px 15px -10px rgba(0,0,0,0.75); 
+    box-shadow: 0px 0px 15px -10px rgba(0,0,0,0.75);
+    padding: 30px;
+    border-radius: 20px;
+    width: auto;
+    width: 750px;
 }
 
-@media (max-width: 768px) {
-    .totalsDataMainContainer{
-        align-items: flex-start;
-    }
-}
-    
+
 
 .totalsDataItemsTitle{
     display: flex;
 
 }
 
-.totalsDataItemsTitle h1{
+.totalsDataItemsTitle h1 {
     font-size: 22px;
     font-weight: 600;
+    flex:1;
     margin-bottom: 10px;
     text-transform: uppercase;
 
 }
 
-.totalsDataSubContainer{
+.totalsDataSubContainer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     margin-bottom: 20px;
     width: auto;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 
-}
-
-@media (max-width: 769px) {
-    .totalsDataSubContainer{
-        flex-direction: column;
-    }
 }
 
 .totalsDataItem{
-    width: 170px; 
+    width: 220px; 
     display: flex;
     flex-direction: column;
     margin: auto;
@@ -55,32 +49,33 @@
     cursor: pointer;
     -webkit-box-shadow: 0px 0px 15px -10px rgba(0,0,0,0.75); 
     box-shadow: 0px 0px 15px -10px rgba(0,0,0,0.75);
-
 }
 
-.totalsDataItemTitle {
-    font-size: 16px;
+.totalsDataItemTitle{
+    font-size: 20px;
     font-weight: bold;
     color: #D54780;
 }
 
 .totalsDataItemContainer {
     display: flex;
-    flex-direction: column;
-    align-items: center;        
-
+    justify-content: center;
+    align-items: center;
+    margin: 0px 0px;
 }
 
-.totalsDataItemValue{
-    font-size: 20px;
+.totalsDataItemValue {
+    font-size: 30px;
     font-weight: bold;
-    color: black;
+    
 }
 
 .totalsDataItemGrowth {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: bold;
-    color: darkgray;
+    margin-left: 15px;
+    color: rgb(169, 165, 165);
+    
 }
 
 .totalsDataIcon {
@@ -92,3 +87,5 @@
 .totalsDataIcon.negative{
     color: red;
 }
+
+

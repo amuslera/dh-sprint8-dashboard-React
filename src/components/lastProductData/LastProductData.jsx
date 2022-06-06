@@ -17,7 +17,7 @@ export default class lastProductData extends React.Component {
             loading: false,
             lastProduct: totals2,
             imagenProducto: "https://dh-g9-clessidra.herokuapp.com/images/products/" + totals2.data.imagen
-        })
+    })                      
         if(!this.state.lastProduct.data.imagen) {
             return this.setState(
                 {imagenProducto: "https://dh-g9-clessidra.herokuapp.com/images/noImage.png"}
@@ -37,10 +37,9 @@ export default class lastProductData extends React.Component {
         }
 
         return (
-        <div className='lastProductData'>
             <div className='lastProductDataMainContainer'>
                 <div className='lastProductDataItemsTitle'>
-                    <span>Ultimo producto registrado en BD</span>
+                    <h1>Ultimo producto registrado en BD</h1>
                 </div>
                 <div className='lastProductDataSubContainer'>
                     <div className='lastProductDataItem'>
@@ -70,12 +69,11 @@ export default class lastProductData extends React.Component {
                         </div>
                         <div className='lastProductDataItemContainer'>
                         <span className='lastProductDataItemTitle'>Imagen principal:</span>
-                        <span className='lastProductDataItemValue'><img className='lastProductAvatarImg' src= {this.state.imagenProducto} alt=""/></span>
+                        <span className='lastProductDataItemValue'><img src= {this.state.imagenProducto} alt=""/></span>
                         </div>                        
                     </div>
                 </div>
                 </div>
-        </div>
         )
         
     }
